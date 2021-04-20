@@ -16,7 +16,7 @@
 <body>
  <div class="container">
         <div class="row">
-<h1>Exercise Advanced 1 </h1>
+<h1> Fahrheit - and what that actually means </h1>
                 <form action="advanced.php" method="POST">
                     Fahrenheit: <input type="text" name="temp">
                     <input type="submit" name="submit" value= "Tell me the temp" class="btn btn-primary">
@@ -24,30 +24,33 @@
                      <?php 
                      function celcius ($fahrenheit) {
                          $celcius =  ($fahrenheit - 32) * 5/9;
-                         return $celcius;
+                         return floor($celcius);
                      }
                      if (isset($_POST["submit"])) {
+
+                        if ($_POST["temp"]) 
                              $celcius = celcius ($_POST["temp"]);
                          switch ($celcius) {
                              case ($celcius<6);
-                             echo '<span class="txt"> 🥶 </br>Very cold </span>';
+                             echo '<span class="txt"> 🥶 '.$celcius.' C </br>Very cold </span>';
                              break;
                               case ($celcius<10);
-                             echo '<span class="txt"> ☃️ </br> cold </span>';
+                             echo '<span class="txt"> ☃️ '.$celcius.' C </br> cold </span>';
                              break;
                               case ($celcius<15);
-                             echo '<span class="txt"> 🥰 </br> pleasant </span>';
+                             echo '<span class="txt"> 🥰 '.$celcius.' C </br> pleasant </span>';
                              break;
                               case ($celcius<21);
-                             echo '<span class="txt"> 🥵 </br> warm </span>';
+                             echo '<span class="txt"> 🥵 '.$celcius.' C</br> warm </span>';
                              break;
                               case ($celcius>=21);
-                             echo '<span class="txt"> 🔥 </br> hot </span>';
+                             echo '<span class="txt"> 🔥 '.$celcius.' C </br> hot </span>';
                              break;
                              default : echo "something went wrong 🤡";
                           echo '<div class="fahreneheitt"> It is ' .floor($celcius). '°C
                          </div>';
-                         }
+                         }} else {
+                            echo"please enter a value!";
                         }
                          ?>
     </div>

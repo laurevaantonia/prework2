@@ -5,9 +5,13 @@
 	margin: 10px auto;
 	background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 	padding: 20px;
-	max-width: 400px;
+	max-width: 80%;
 }
 
 footer {
 	font-size: small;
+}
+
+.txt {
+	text-align: center;
 }

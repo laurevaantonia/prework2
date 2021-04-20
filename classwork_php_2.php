@@ -88,12 +88,12 @@
                         $min = $minutes % 60;
                         echo $minutes. "minutes = ".$hours. " hour(s) and ".$min. "minute(s)";
                     };
-                      minutes(200);
+                      minutes(70);
                     ?>
                 </div>
                    </div>
                   <div class="exercise">
-                    <h1>Exercise 6</h1>
+                    <h1 class= green > Exercise 6</h1>
                      <form action="classwork_php_2.php" method="POST">
                     surname: <input type="text" name="name2">
                     firstname: <input type="text" name="name1">
@@ -111,9 +111,9 @@
                      if (isset($_POST["go"])) {
                          if ($_POST["name2"]|| $_POST["name1"]) { 
                              if (strlen($_POST["name1"]) < 5) {
-                                 echo '<div class=red> Welcome ' .$_POST["name1"]. $_POST["name2"].'</div>';
+                                 echo '<div class="red"> Welcome ' .$_POST["name1"]. $_POST["name2"].'</div>';
                              } else { 
-                                 echo '<div class=green> Welcome ' .$_POST["name1"] .$_POST["name2"].'!</div>';
+                                 echo '<div class="green"> Welcome ' .$_POST["name1"] .$_POST["name2"].'!</div>';
                              }
                          } else {
                              echo "please insert your name, or please insert your surname";}}
